@@ -38,8 +38,14 @@ public class playground {
                 .filter(noGreaterThan5) //accepts predicate functional interface implemented by lambda expression
                 .collect(Collectors.toList());
 
-        System.out.println("Greated Than 5 items" +collect); // [6, 7, 8, 9, 10]
-
+        System.out.println("Greated Than 5 items" +collect); 
+        
+        //Consumer Functional Interface in java which can be assigned to lambda  expression
+        // Other usages are in Strem API of collection such as Predicate for filtering, and Thread's Runnable interface. 
+        Consumer<String> cons =	(t1) -> System.out.println("printing with params values:"+t1);
+        cons.accept("Test Consumer");
+        
+        
 
     }
     
